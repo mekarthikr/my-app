@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import axios from "axios";
+import { useParams } from "react-router-dom";
 
 export class PostList extends Component
 {
@@ -29,7 +30,7 @@ export class PostList extends Component
                 List of post
                 {
                     posts.length?
-                    posts.map(post=><li>{post.id} {post.title}</li>):null
+                    posts.map((post)=><li key={post.id} >{post.id} {post.title}</li>):null
                 }
             </div>
         )

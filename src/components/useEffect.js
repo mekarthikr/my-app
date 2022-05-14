@@ -5,7 +5,6 @@ export default function UseEffect()
     const [count,setCount] = useState(0)
     const [name,setName] = useState('')
     useEffect(()=>{
-        // document.title=`${count}`
         console.log("count")
     },[])
     return(
